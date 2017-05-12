@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT
 {
-    public class Automovil
+    public class Automovil 
     {
         public int AutomovilId { get; set; }
         public TipoAuto TipoAuto { get; set; }

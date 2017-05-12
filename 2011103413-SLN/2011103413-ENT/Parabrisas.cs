@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT
 {
-    public class Parabrisas
+    public class Parabrisas 
     {
         public int ParabrisasId { get; set; }
         public string NumSerie { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT
 {
-    public class Bus
+    public class Bus 
     {
         public int BusId { get; set; }
         public TipoBus TipoBus { get; set; }

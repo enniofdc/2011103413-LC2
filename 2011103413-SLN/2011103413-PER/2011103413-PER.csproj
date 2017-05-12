@@ -48,6 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnsambladoraDbContext.cs" />
+    <Compile Include="Migrations\201705120640094_Model.cs" />
+    <Compile Include="Migrations\201705120640094_Model.Designer.cs">
+      <DependentUpon>201705120640094_Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +64,11 @@
       <Project>{255705f4-f2e0-412b-b1ed-5013a4cba302}</Project>
       <Name>2011103413-ENT</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705120640094_Model.resx">
+      <DependentUpon>201705120640094_Model.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
