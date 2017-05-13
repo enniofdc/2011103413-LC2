@@ -18,12 +18,14 @@ namespace _2011103413_PER.EntityTypeConfigurations
 
 
             HasRequired(v => v.Cinturon)
-                .WithRequiredPrincipal(c => c.Asiento)
-                .HasForeignKey(c => c.AsientoId);
+                .WithRequiredPrincipal(c => c.Asiento);
+
+
+                //.HasForeignKey(c => c.CinturonId);
 
         }
 
     }
 
-    }
+    
 }

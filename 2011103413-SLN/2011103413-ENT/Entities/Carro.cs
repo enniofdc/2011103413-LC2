@@ -21,6 +21,6 @@ namespace _2011103413_ENT
         public Bus Bus { get; set; }
         public Propietario Propietario { get; set; }
 
-       
+        //public int LlantaId { get; set; }
     }
 }

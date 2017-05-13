@@ -8,5 +8,6 @@ namespace _2011103413_ENT
 {
     public class Ensambladora
     {
+
     }
 }

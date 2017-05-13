@@ -16,6 +16,8 @@ namespace _2011103413_PER.EntityTypeConfigurations
             Property(v => v.LlantaId)
                 .IsRequired();
 
+            HasRequired(e => e.Carro).WithMany(l => l.LlantaId).HasForeignKey(e => e.CarroId);
+
         }
     }
 }

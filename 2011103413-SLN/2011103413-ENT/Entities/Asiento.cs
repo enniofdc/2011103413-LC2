@@ -11,7 +11,7 @@ namespace _2011103413_ENT
         public int AsientoId { get; set; }
         public string NumSerie { get; set; }
         public Cinturon Cinturon { get; set; }
-
+        public int CinturonId { get; set; }
         public ICollection<Carro> Carro { get; set; }
 
         public Asiento()

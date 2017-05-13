@@ -14,7 +14,7 @@ namespace _2011103413_ENT
 
         public Asiento Asiento { get; set; }
 
-        public int AsientoId { get; set; }
+       // public int AsientoId { get; set; }
 
     }
 }

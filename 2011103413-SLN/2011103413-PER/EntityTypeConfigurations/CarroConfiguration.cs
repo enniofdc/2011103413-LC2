@@ -16,6 +16,8 @@ namespace _2011103413_PER.EntityTypeConfigurations
             Property(v => v.CarroId)
                 .IsRequired();
 
+           
+
         }
     }
 }
