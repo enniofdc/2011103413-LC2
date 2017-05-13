@@ -48,6 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnsambladoraDbContext.cs" />
+    <Compile Include="EntityTypeConfigurations\AsientoConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\AutomovilConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\BusConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\CarroConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\CinturonConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\EnsambladoraConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\LlantaConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\ParabrisasConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\PropietarioConfiguration.cs" />
+    <Compile Include="EntityTypeConfigurations\VolanteConfiguration.cs" />
     <Compile Include="Migrations\201705120640094_Model.cs" />
     <Compile Include="Migrations\201705120640094_Model.Designer.cs">
       <DependentUpon>201705120640094_Model.cs</DependentUpon>

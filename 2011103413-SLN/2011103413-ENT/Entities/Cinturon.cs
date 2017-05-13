@@ -12,12 +12,9 @@ namespace _2011103413_ENT
         public string NumSerie { get; set; }
         public int Metraje { get; set; }
 
-        public ICollection<Asiento> Asiento { get; set; }
+        public Asiento Asiento { get; set; }
 
-        public Cinturon()
-        {
-            Asiento = new List<Asiento>();
-        }
+        public int AsientoId { get; set; }
 
     }
 }

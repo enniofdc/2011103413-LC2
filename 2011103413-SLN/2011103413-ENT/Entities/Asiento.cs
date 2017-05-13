@@ -17,6 +17,7 @@ namespace _2011103413_ENT
         public Asiento()
         {
             Carro = new List<Carro>();
+            
         }
     }
 }

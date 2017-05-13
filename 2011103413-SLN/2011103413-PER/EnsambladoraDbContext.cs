@@ -1,4 +1,5 @@
 ﻿using _2011103413_ENT;
+using _2011103413_PER.EntityTypeConfigurations;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -21,7 +22,24 @@ namespace _2011103413_PER
         public DbSet <Bus> Bus{ get; set; }
 
 
-      
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new AsientoConfiguration());
+            modelBuilder.Configurations.Add(new AutomovilConfiguration());
+            modelBuilder.Configurations.Add(new BusConfiguration());
+            modelBuilder.Configurations.Add(new CarroConfiguration());
+            modelBuilder.Configurations.Add(new CinturonConfiguration());
+            modelBuilder.Configurations.Add(new EnsambladoraConfiguration());
+            modelBuilder.Configurations.Add(new LlantaConfiguration());
+            modelBuilder.Configurations.Add(new ParabrisasConfiguration());
+            modelBuilder.Configurations.Add(new PropietarioConfiguration());
+            modelBuilder.Configurations.Add(new VolanteConfiguration());
+
+
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
+
+
 }
