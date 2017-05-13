@@ -19,7 +19,9 @@ namespace _2011103413_PER
         public DbSet <Automovil> Automovil{ get; set; }
         public DbSet <Carro> Carro{ get; set; }
         public DbSet <Bus> Bus{ get; set; }
-        
 
-}
+
+      
+
+    }
 }

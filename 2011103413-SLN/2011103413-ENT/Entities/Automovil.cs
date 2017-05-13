@@ -10,5 +10,12 @@ namespace _2011103413_ENT
     {
         public int AutomovilId { get; set; }
         public TipoAuto TipoAuto { get; set; }
+
+        public ICollection<Carro> Carro { get; set; }
+
+        public Automovil()
+        {
+            Carro = new List<Carro>();
+        }
     }
 }

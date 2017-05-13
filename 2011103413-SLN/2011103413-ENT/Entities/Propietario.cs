@@ -13,6 +13,13 @@ namespace _2011103413_ENT
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string LicenciaConducir { get; set; }
-        
+
+        public ICollection<Carro> Carro { get; set; }
+
+        public Propietario()
+        {
+            Carro = new List<Carro>();
+        }
+
     }
 }

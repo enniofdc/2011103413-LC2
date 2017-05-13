@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT
 {
-    public class Asiento 
+    public class Llanta 
     {
-        public int AsientoId { get; set; }
+        public int LlantaId { get; set; }
         public string NumSerie { get; set; }
-        public Cinturon Cinturon { get; set; }
+
+        public ICollection<Carro> Carro { get; set; }
+
+        public Llanta()
+        {
+            Carro = new List<Carro>();
+        }
     }
 }

@@ -10,5 +10,12 @@ namespace _2011103413_ENT
     {
         public int VolanteId { get; set; }
         public string NumSerie { get; set; }
+
+        public ICollection<Carro> Carro { get; set; }
+
+        public Volante()
+        {
+            Carro = new List<Carro>();
+        }
     }
 }

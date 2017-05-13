@@ -10,5 +10,12 @@ namespace _2011103413_ENT
     {
         public int ParabrisasId { get; set; }
         public string NumSerie { get; set; }
+
+        public ICollection<Carro> Carro { get; set; }
+
+        public Parabrisas()
+        {
+            Carro = new List<Carro>();
+        }
     }
 }

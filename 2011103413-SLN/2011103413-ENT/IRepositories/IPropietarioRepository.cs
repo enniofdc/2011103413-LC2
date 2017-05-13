@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2011103413_ENT
+namespace _2011103413_ENT.IRepositories
 {
-    public class Bus 
+    public interface IPropietarioRepository : IRepository <Propietario>
     {
-        public int BusId { get; set; }
-        public TipoBus TipoBus { get; set; }
     }
 }
