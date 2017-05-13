@@ -8,5 +8,9 @@ namespace _2011103413_CON
 {
     public class Class1
     {
+        static void Main (String [] args)
+        {
+
+        }
     }
 }
