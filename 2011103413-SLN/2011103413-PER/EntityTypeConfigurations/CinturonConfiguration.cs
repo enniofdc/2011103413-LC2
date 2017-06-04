@@ -14,6 +14,7 @@ namespace _2011103413_PER.EntityTypeConfigurations
         {
             Property(v => v.CinturonId)
                 .IsRequired();
+            enioooooooooooooeieoieoieo;
 
 
         }
