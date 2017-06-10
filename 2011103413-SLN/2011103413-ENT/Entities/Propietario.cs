@@ -8,18 +8,12 @@ namespace _2011103413_ENT
 {
     public class Propietario
     {
+        //Considerando que cada propietario tiene un carro (1 a 1)
         public int PropietarioId { get; set; }
-        public string Dni { get; set; }
+        public string DNI { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string LicenciaConducir { get; set; }
-
-        public ICollection<Carro> Carro { get; set; }
-
-        public Propietario()
-        {
-            Carro = new List<Carro>();
-        }
 
     }
 }

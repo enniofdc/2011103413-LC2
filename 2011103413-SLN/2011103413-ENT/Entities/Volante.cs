@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT
 {
-    public class Volante 
+    public class Volante
     {
         public int VolanteId { get; set; }
         public string NumSerie { get; set; }
 
-        public ICollection<Carro> Carro { get; set; }
-
-        public Volante()
-        {
-            Carro = new List<Carro>();
-        }
     }
 }

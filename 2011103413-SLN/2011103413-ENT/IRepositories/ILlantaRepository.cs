@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT.IRepositories
 {
-    public interface ILlantaRepository : IRepository <Llanta>
+    public interface ILlantaRepository:IRepository<Llanta>
     {
     }
 }

@@ -5,21 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace _2011103413_PER.Repositories
 {
     public class LlantaRepository : Repository<Llanta>, ILlantaRepository
     {
-        private readonly EnsambladoraDbContext _Context;
-
-        public LlantaRepository(EnsambladoraDbContext context)
+        public LlantaRepository(EnsambladoraDbContext context) : base(context)
         {
-            _Context = context;
-        }
-
-        private LlantaRepository()
-        {
-                
         }
     }
 }

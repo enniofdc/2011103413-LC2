@@ -5,20 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace _2011103413_PER.Repositories
 {
     public class AutomovilRepository : Repository<Automovil>, IAutomovilRepository
     {
-        private readonly EnsambladoraDbContext _Context;
-
-        public AutomovilRepository(EnsambladoraDbContext context)
+        public AutomovilRepository(EnsambladoraDbContext context) : base(context)
         {
-            _Context = context;
-        }
-        private AutomovilRepository()
-        {
-                    
         }
     }
 }

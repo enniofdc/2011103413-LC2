@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{212BA03B-1816-4A3C-A94A-2F7B5A37D3D0}</ProjectGuid>
+    <ProjectGuid>{B03707C2-FF31-44A5-BACD-9B2FF6AFE3F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>_2011103413_PER</RootNamespace>
     <AssemblyName>2011103413-PER</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -48,19 +48,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EnsambladoraDbContext.cs" />
-    <Compile Include="EntityTypeConfigurations\AsientoConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\AutomovilConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\BusConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\CarroConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\CinturonConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\EnsambladoraConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\LlantaConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\ParabrisasConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\PropietarioConfiguration.cs" />
-    <Compile Include="EntityTypeConfigurations\VolanteConfiguration.cs" />
-    <Compile Include="Migrations\201705120640094_Model.cs" />
-    <Compile Include="Migrations\201705120640094_Model.Designer.cs">
-      <DependentUpon>201705120640094_Model.cs</DependentUpon>
+    <Compile Include="EntitiesConfigurations\AsientoConfiguration.cs" />
+    <Compile Include="EntitiesConfigurations\CarroConfiguration.cs" />
+    <Compile Include="EntitiesConfigurations\CinturonConfiguration.cs" />
+    <Compile Include="EntitiesConfigurations\EnsambladoraConfiguration.cs" />
+    <Compile Include="EntitiesConfigurations\LlantaConfiguration.cs" />
+    <Compile Include="EntitiesConfigurations\ParabrisasConfiguration.cs" />
+    <Compile Include="EntitiesConfigurations\PropietarioConfiguration.cs" />
+    <Compile Include="EntitiesConfigurations\VolanteConfiguration.cs" />
+    <Compile Include="Migrations\201706082041318_InitialModel.cs" />
+    <Compile Include="Migrations\201706082041318_InitialModel.Designer.cs">
+      <DependentUpon>201706082041318_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706082114136_InitialModel2.cs" />
+    <Compile Include="Migrations\201706082114136_InitialModel2.Designer.cs">
+      <DependentUpon>201706082114136_InitialModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706090304541_InitialModel4.cs" />
+    <Compile Include="Migrations\201706090304541_InitialModel4.Designer.cs">
+      <DependentUpon>201706090304541_InitialModel4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706090330509_InitialModel5.cs" />
+    <Compile Include="Migrations\201706090330509_InitialModel5.Designer.cs">
+      <DependentUpon>201706090330509_InitialModel5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,12 +80,11 @@
     <Compile Include="Repositories\CarroRepository.cs" />
     <Compile Include="Repositories\CinturonRepository.cs" />
     <Compile Include="Repositories\EnsambladoraRepository.cs" />
-    <Compile Include="Repositories\IUnityOfWork.cs" />
     <Compile Include="Repositories\LlantaRepository.cs" />
     <Compile Include="Repositories\ParabrisasRepository.cs" />
     <Compile Include="Repositories\PropietarioRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
-    <Compile Include="Repositories\UnityOfWork.cs" />
+    <Compile Include="Repositories\UnityofWork.cs" />
     <Compile Include="Repositories\VolanteRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -84,14 +93,30 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\2011103413-ENT\2011103413-ENT.csproj">
-      <Project>{255705f4-f2e0-412b-b1ed-5013a4cba302}</Project>
+      <Project>{998eff4e-8778-4357-b97b-0bd64bfb3f66}</Project>
       <Name>2011103413-ENT</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705120640094_Model.resx">
-      <DependentUpon>201705120640094_Model.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706082041318_InitialModel.resx">
+      <DependentUpon>201706082041318_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706082114136_InitialModel2.resx">
+      <DependentUpon>201706082114136_InitialModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706090304541_InitialModel4.resx">
+      <DependentUpon>201706090304541_InitialModel4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706090330509_InitialModel5.resx">
+      <DependentUpon>201706090330509_InitialModel5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

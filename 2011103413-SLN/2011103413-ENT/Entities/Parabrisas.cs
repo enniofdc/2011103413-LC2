@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT
 {
-    public class Parabrisas 
+    public class Parabrisas
     {
         public int ParabrisasId { get; set; }
         public string NumSerie { get; set; }
+        //public Carro Carro { get; set; }
+        //public int CarroId { get; set; }
 
-        public ICollection<Carro> Carro { get; set; }
-
-        public Parabrisas()
-        {
-            Carro = new List<Carro>();
-        }
     }
 }

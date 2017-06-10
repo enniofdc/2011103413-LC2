@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT
 {
-    public class Bus 
+    public class Bus:Carro
     {
-        public int BusId { get; set; }
         public TipoBus TipoBus { get; set; }
 
-        public ICollection<Carro> Carro { get; set; }
-
-        public Bus()
+        public Bus():base()
         {
-            Carro = new List<Carro>();
+
         }
     }
 }

@@ -5,20 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace _2011103413_PER.Repositories
 {
     public class EnsambladoraRepository : Repository<Ensambladora>, IEnsambladoraRepository
     {
-        private readonly EnsambladoraDbContext _Context;
-
-        public EnsambladoraRepository(EnsambladoraDbContext context)
+        public EnsambladoraRepository(EnsambladoraDbContext context) : base(context)
         {
-            _Context = context;
-        }
-        private EnsambladoraRepository()
-        {
-                
         }
     }
 }

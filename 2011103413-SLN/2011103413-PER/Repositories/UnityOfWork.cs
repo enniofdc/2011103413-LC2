@@ -1,74 +1,62 @@
-﻿using System;
+﻿using _2011103413_ENT.IRepositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using _2011103413_ENT.IRepositories;
 
 namespace _2011103413_PER.Repositories
 {
-    public class UnityOfWork : IUnityOfWork
+    public class UnityofWork : IUnityofWork
     {
         private readonly EnsambladoraDbContext _Context;
-        private static UnityOfWork _Instance;
-        private static readonly object _Lock = new object();
 
-
-        public IAsientoRepository Asiento { get; private set; }
-        public IAutomovilRepository Automovil { get; private set; }
-        public IBusRepository Bus { get; private set; }
-        public ICarroRepository Carro { get; private set; }
-        public ICinturonRepository Cinturon { get; private set; }
-        public IEnsambladoraRepository Ensambladora { get; private set; }
-        public ILlantaRepository Llanta { get; private set; }
+        public IAsientoRepository Asientos { get; private set; }
+        public IAutomovilRepository Automoviles { get; private set; }
+        public IBusRepository Buses { get; private set; }
+        public ICarroRepository Carros { get; private set; }
+        public ICinturonRepository Cinturones { get; private set; }
+        public IEnsambladoraRepository Ensambladoras { get; private set; }
+        public ILlantaRepository Llantas { get; private set; }
         public IParabrisasRepository Parabrisas { get; private set; }
-        public IPropietarioRepository Propietario { get; private set; }
-        public IVolanteRepository Volante { get; private set; }
-
-        private UnityOfWork()
+        public IPropietarioRepository Propietarios { get; private set; }
+        public IVolanteRepository Volantes { get; private set; }
+        
+        public UnityofWork()
         {
-            _Context = new EnsambladoraDbContext();
-
-            Asiento = new AsientoRepository(_Context);
-            Automovil = new AutomovilRepository(_Context);
-            Bus = new BusRepository(_Context);
-            Carro = new CarroRepository(_Context);
-            Cinturon = new CinturonRepository(_Context);
-            Ensambladora = new EnsambladoraRepository(_Context);
-            Llanta = new LlantaRepository(_Context);
-            Parabrisas = new ParabrisasRepository(_Context);
-            Propietario = new PropietarioRepository(_Context);
-            Volante = new VolanteRepository(_Context);
-
-
 
         }
 
-        //Implementacion del patron singleton para instanciar la clase UnityOfWork
-        //Con este patron se asegura que en cualquier parte del codigo que se quiera
-        //instancia la base de datos, se devuelve una unica referencia.
-        public static UnityOfWork Instance
+        public UnityofWork(EnsambladoraDbContext context)
         {
-            get
-            {
-                lock (_Lock)
-                {
-                    if (_Instance == null)
-                        _Instance = new UnityOfWork();
-                }
-                return _Instance;
-        
-             }
-          }
 
+            _Context = context;
 
+            Asientos = new AsientoRepository(_Context);
+            Automoviles = new AutomovilRepository(_Context);
+            Buses = new BusRepository(_Context);
+            Carros = new CarroRepository(_Context);
+            Cinturones = new CinturonRepository(_Context);
+            Ensambladoras = new EnsambladoraRepository(_Context);
+            Llantas = new LlantaRepository(_Context);
+            Parabrisas = new ParabrisasRepository(_Context);
+            Propietarios = new PropietarioRepository(_Context);
+            Volantes = new VolanteRepository(_Context);
+
+        }
         public void Dispose()
         {
             _Context.Dispose();
         }
+
         public int SaveChanges()
         {
             return _Context.SaveChanges();
+        }
+
+        public void StateModified(object Entity)
+        {
+            _Context.Entry(Entity).State = System.Data.Entity.EntityState.Modified;
         }
     }
 }

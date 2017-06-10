@@ -5,20 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace _2011103413_PER.Repositories
 {
     public class VolanteRepository : Repository<Volante>, IVolanteRepository
     {
-        private readonly EnsambladoraDbContext _Context;
-
-        public VolanteRepository(EnsambladoraDbContext context)
+        public VolanteRepository(EnsambladoraDbContext context) : base(context)
         {
-            _Context = context;
-        }
-        private VolanteRepository()
-        {
-                
         }
     }
 }

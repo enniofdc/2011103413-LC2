@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT
 {
-    public class Automovil 
+    public class Automovil:Carro
     {
-        public int AutomovilId { get; set; }
         public TipoAuto TipoAuto { get; set; }
 
-        public ICollection<Carro> Carro { get; set; }
-
-        public Automovil()
+        public Automovil():base()
         {
-            Carro = new List<Carro>();
+
         }
     }
 }

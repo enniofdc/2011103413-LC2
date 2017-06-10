@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2011103413_ENT.IRepositories
 {
-    public interface IParabrisasRepository : IRepository <Parabrisas>
+    public interface IParabrisasRepository:IRepository<Parabrisas>
     {
     }
 }

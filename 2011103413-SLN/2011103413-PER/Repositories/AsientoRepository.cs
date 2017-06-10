@@ -5,21 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace _2011103413_PER.Repositories
 {
-    public class AsientoRepository : Repository <Asiento>, IAsientoRepository
+    public class AsientoRepository : Repository<Asiento>, IAsientoRepository
     {
-        private readonly EnsambladoraDbContext _Context;
-
-        private AsientoRepository()
+        public AsientoRepository(EnsambladoraDbContext context) : base(context)
         {
         }
-
-        public AsientoRepository(EnsambladoraDbContext context)
-        {
-            _Context = context;
-        }
-
     }
 }
